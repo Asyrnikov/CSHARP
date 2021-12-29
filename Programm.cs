@@ -1,16 +1,33 @@
 using System;
 
- namespace LB_2
+namespace LB_2
 {
     class Programm
     {
         static void Main(string[] args)
         {
-            A aObject = new A(18, 3); 
-            B bObject = new B(2, 9, 60);
 
-            Console.WriteLine($"Result: {aObject.c}");
-            Console.WriteLine($"Result: {bObject.c2}");
+            B bObject = new B(3, 4, 5, 7);
+            B aObject = new B(4, 4, 5, 7);
+
+            if (bObject)
+            {
+                Console.WriteLine($"d is positive");
+            }
+            else
+            {
+                Console.WriteLine($"d is negative");
+            }
+
+            if (bObject | aObject)
+            {
+                Console.WriteLine($"same objects");
+            }
+            else
+            {
+                Console.WriteLine($"not same");
+            }
+
             Console.Read();
         }
     }
